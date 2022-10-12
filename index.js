@@ -19,7 +19,6 @@ let xTurn;
 restartButton.addEventListener("click", startGame);
 
 
-
 startGame();
 
 function startGame() {
@@ -36,12 +35,10 @@ function startGame() {
 
 
 function handleClick(e) {
-    // console.log("clicked");
     const cell = e.target;
     const currentClass = xTurn ? X_CLASS : CIRCLE_CLASS;
     placeMark(cell, currentClass);
     if (checkWin(currentClass)) {
-        // console.log("winner");
         endGame(false);
     } else if (isDraw()) {
         endGame(true);
